@@ -1033,14 +1033,16 @@ def do_run():
                                         if animation_mode != "None"
                                         else i
                                     )
-                                    filename = f"{args.batch_name}({args.batchNum})_{save_num}.png"
+                                    filename = (
+                                        f"{count}.{key}({args.batchNum})_{save_num}.png"
+                                    )
                                 else:
                                     # If we're working with percentages, append it
                                     if args.steps_per_checkpoint is not None:
-                                        filename = f"{args.batch_name}({args.batchNum})_{i:04}-{percent:02}%.png"
+                                        filename = f"{count}.{key}({args.batchNum})_{i:04}-{percent:02}%.png"
                                     # Or else, iIf we're working with specific steps, append those
                                     else:
-                                        filename = f"{args.batch_name}({args.batchNum})_{i:04}-{j:03}.png"
+                                        filename = f"{count}.{key}({args.batchNum})_{i:04}-{j:03}.png"
                             image = TF.to_pil_image(image.add(1).div(2).clamp(0, 1))
                             if j % args.display_rate == 0 or cur_t == -1:
                                 image.save("progress.png")
