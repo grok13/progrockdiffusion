@@ -1,5 +1,5 @@
 {
-    "batch_name": "Default",
+    "batch_name": "Cities",
     "text_prompts": {
         "0": [
             "The Big Sur Coast, by Asher Brown Durand, featured on ArtStation."
@@ -8,8 +8,8 @@
     "n_batches": 1,
     "steps": 250,
     "display_rate": 50,
-    "width": 832,
-    "height": 512,
+    "width": 1280,
+    "height": 768,
     "set_seed": "random_seed",
     "image_prompts": {},
     "clip_guidance_scale": 5000,
@@ -30,7 +30,7 @@
     "randomize_class": true,
     "clip_denoised": false,
     "clamp_grad": true,
-    "clamp_max": 0.05,
+    "clamp_max": 0.045, //0.05
     "fuzzy_prompt": false,
     "rand_mag": 0.05,
     "eta": 0.8,
@@ -39,10 +39,10 @@
     "diffusion_steps": 1000,
     "ViTB32": true,
     "ViTB16": true,
-    "ViTL14": false,
-    "RN101": false,
-    "RN50": true,
-    "RN50x4": false,
+    "ViTL14": true,
+    "RN101": true,
+    "RN50": false,
+    "RN50x4": true,
     "RN50x16": false,
     "SLIPB16": false,
     "SLIPL16": false,
