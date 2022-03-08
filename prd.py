@@ -2627,8 +2627,8 @@ if intermediate_saves and intermediates_in_subfolder is True:
 
 # @markdown ####**SuperRes Sharpening:**
 # @markdown *Sharpen each image using latent-diffusion. Does not run in animation mode. `keep_unsharp` will save both versions.*
-sharpen_preset = "Off"  # @param ['Off', 'Faster', 'Fast', 'Slow', 'Very Slow']
-keep_unsharp = False  # @param{type: 'boolean'}
+sharpen_preset = "Slow"  # @param ['Off', 'Faster', 'Fast', 'Slow', 'Very Slow']
+keep_unsharp = True  # @param{type: 'boolean'}
 
 if sharpen_preset != "Off" and keep_unsharp is True:
     unsharpenFolder = f"{batchFolder}/unsharpened"
